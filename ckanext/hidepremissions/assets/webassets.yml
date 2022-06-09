@@ -1,0 +1,14 @@
+# hidepremissions-js:
+#   filter: rjsmin
+#   output: ckanext-hidepremissions/%(version)s-hidepremissions.js
+#   contents:
+#     - js/hidepremissions.js
+#   extra:
+#     preload:
+#       - base/main
+
+# hidepremissions-css:
+#   filter: cssrewrite
+#   output: ckanext-hidepremissions/%(version)s-hidepremissions.css
+#   contents:
+#     - css/hidepremissions.css
