@@ -17,8 +17,7 @@ class HidepremissionsPlugin(plugins.SingletonPlugin):
     def _facets(self, facets_dict):
         if 'groups' in facets_dict:
             del facets_dict['groups']
-        if 'organization' in facets_dict:
-            facets_dict['repository'] = facets_dict['organization']
+        facets_dict['organization'] = toolkit._('Repository')
         return facets_dict
 
     def dataset_facets(self, facets_dict, package_type):
