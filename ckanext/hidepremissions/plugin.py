@@ -27,7 +27,9 @@ class HidepremissionsPlugin(plugins.SingletonPlugin):
 
     def organization_facets(self, facets_dict, organization_type,
                             package_type):
-        return self._facets(facets_dict)
+        if 'organization' in facets_dict:
+            facets_dict['repository'] = facets_dict['organization']
+        return facets_dict
 
     def get_auth_functions(self):
         return {
