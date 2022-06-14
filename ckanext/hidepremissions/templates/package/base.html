@@ -1,0 +1,12 @@
+{% ckan_extends %}
+
+{% block breadcrumb_content %}
+{% if pkg %}
+ {% if pkg.organization %}
+       {% snippet "snippets/package_breadcrumb.html", organization=pkg.organization, pkg=pkg_dict %}
+    {% else %}
+      <li>{% link_for _('Datasets'), controller='package', action='search' %}</li>
+    {% endif %}
+{% endif %}
+
+{% endblock %}
