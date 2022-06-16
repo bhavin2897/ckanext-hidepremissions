@@ -1,0 +1,10 @@
+{% ckan_extends %}
+
+{% block info %}
+
+    {% if has_context_title %}
+      <h2 class="module-heading"><i class="fa fa-building-o"></i> {{ _('Repository') }}</h2>
+    {% endif %}
+
+{{ super() }}
+{% endblock %}
