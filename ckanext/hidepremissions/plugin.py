@@ -9,6 +9,15 @@ def no_registering(context, data_dict):
         )
     }
 
+#global search_input_value
+#
+#def firstfunction(self,input):
+#    return input
+#
+#def _just_get_value(self):
+#    value = firstfunction()
+#    return value
+
 class HidepremissionsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets)
