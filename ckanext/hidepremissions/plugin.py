@@ -1,13 +1,13 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
-def no_registering(context, data_dict):
-    return {
-        'success': False,
-        'msg': toolkit._(
-            'You cannot register.'
-        )
-    }
+#def no_registering(context, data_dict):
+ #   return {
+  #      'success': False,
+   #     'msg': toolkit._(
+    #        'You cannot register.'
+     #   )
+    #}
 
 class HidepremissionsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -30,10 +30,10 @@ class HidepremissionsPlugin(plugins.SingletonPlugin):
                             package_type):
         return self._facets(facets_dict)
 
-    def get_auth_functions(self):
-        return {
-            'user_create': no_registering
-        }
+    #def get_auth_functions(self):
+     #   return {
+      #      'user_create': no_registering
+       # }
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
