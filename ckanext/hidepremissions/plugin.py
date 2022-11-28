@@ -12,7 +12,7 @@ import ckan.plugins.toolkit as toolkit
 class HidepremissionsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets)
-    plugins.implements(plugins.IAuthFunctions,inherit = True)
+    #plugins.implements(plugins.IAuthFunctions,inherit = True)
 
     def _facets(self, facets_dict):
         if 'groups' in facets_dict:
