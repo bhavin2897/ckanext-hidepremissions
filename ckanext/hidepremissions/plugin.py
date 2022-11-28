@@ -5,18 +5,9 @@ def no_registering(context, data_dict):
     return {
         'success': False,
         'msg': toolkit._(
-            'You cannot register for this site.'
+            'You cannot register.'
         )
     }
-
-#global search_input_value
-#
-#def firstfunction(self,input):
-#    return input
-#
-#def _just_get_value(self):
-#    value = firstfunction()
-#    return value
 
 class HidepremissionsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
