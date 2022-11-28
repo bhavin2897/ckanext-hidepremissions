@@ -1,7 +1,7 @@
 {% ckan_extends %}
 
-<!--{% block header_account %}-->
-
+{% block header_account %}
+{{ super() }}
 <!--<div class="account-masthead">-->
 <!--  <div class="container">-->
 <!--        {% if c.userobj.sysadmin %}-->
@@ -18,7 +18,7 @@
 <!--      {% endif %}-->
 <!--  </div>-->
 <!--</div>-->
-<!--{% endblock %}-->
+{% endblock %}
 
 
 {{ super() }}
