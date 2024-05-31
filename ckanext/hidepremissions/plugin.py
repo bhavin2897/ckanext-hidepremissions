@@ -12,15 +12,17 @@ class HidepremissionsPlugin(plugins.SingletonPlugin):
     def _facets(self, facets_dict, package_type):
         if 'groups' in facets_dict:
             del facets_dict['groups']
-            del facets_dict['tags']
+            #del facets_dict['tags']
 
             if package_type == 'molecule_view':
                 facets_dict = {'organization': 'Repositories',
                                'measurement_technique': 'Measurement Technique',
+                               'tags': 'Tags',
                                'license_id': 'License'}
             else:
                 facets_dict = {'organization': 'Repositories',
                                'measurement_technique': 'Measurement Technique',
+                               'tags': 'Tags',
                                'license_id': 'License'}
 
         return facets_dict
